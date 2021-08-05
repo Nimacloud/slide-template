@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Slide Template</title>
+    <meta name="description" content="" />
+    <meta name="author" content="Matthew Turnbull" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"
+    />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/turnbullm.css" id="theme" />
+    <link rel="stylesheet" href="lib/css/zenburn.css" />
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background="#31394B" id="intro">
+          <div class="has-dark-background">
+            <h1>Workshop Title</h1>
+            <h4>by</h4>
+            <div
+              style="
+                position: fixed;
+                top: 0px;
+                right: -200px;
+                border-radius: 50%;
+              "
+            >
+              <img
+                src="images/presenter.jpg"
+                style="border-radius: 50%; margin: 0; max-width: 128px"
+                width="300"
+              />
+              <p style="text-align: center">Presenter Name</p>
+            </div>
+            <div style="position: relative; top: 30px">
+              <img
+                src="images/nima.png"
+                class="inline"
+                width="400"
+                style="position: relative; top: -35px"
+              />
+            </div>
+          </div>
+        </section>
+        <section
+          data-transition="fade"
+          data-background="#31394B"
+          id="section-2"
+        >
+          <h1>Section title with code</h1>
+          <div class="fragment">
+            <p>#1</p>
+            <pre class="highlight javascript" contenteditable>
+ //preformated-js code</pre
+            >
+          </div>
+          <div class="fragment">
+            <p>#2</p>
+            <pre class="highlight javascript" contenteditable>
+ console.log('This is a template')</pre
+            >
+          </div>
+        </section>
+        <section data-background="images/unimpressed.gif" id="preso-why">
+          <div class="has-dark-background">
+            <ul style="font-size: 200%">
+              <li class="fragment">Page with background image</li>
+              <li class="fragment">One Item</li>
+              <li class="fragment">Another one</li>
+            </ul>
+          </div>
+        </section>
+        <section data-background="#31394B" id="thanks">
+          <h2>Thanks for your time</h2>
+          <br /><br />
+          <div style="position: relative; top: 10px">
+            <img
+              src="images/nima.png"
+              class="inline"
+              width="400"
+              style="position: relative; top: -35px"
+            />
+          </div>
+          <h2 class="">See you in the next workshop 🚀!</h2>
+        </section>
+      </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: false,
+        progress: true,
+        history: true,
+        center: true,
+        previewLinks: true,
+        transition: "slide",
+
+        dependencies: [
+          {
+            src: "plugin/highlight/highlight.js",
+            async: true,
+            callback: function () {
+              hljs.configure({ tabReplace: "  " });
+              [].forEach.call(
+                document.querySelectorAll(".highlight"),
+                function (v, i) {
+                  hljs.highlightBlock(v);
+                }
+              );
+            },
+          },
+
+          { src: "plugin/zoom-js/zoom.js", async: true },
+          { src: "plugin/notes/notes.js", async: true },
+        ],
+      });
+    </script>
+  </body>
+</html>
